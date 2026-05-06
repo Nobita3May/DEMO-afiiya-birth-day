@@ -232,6 +232,8 @@ body{background:var(--ink);color:var(--t1);font-family:'Lato',sans-serif;font-we
 .l-rule{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(196,56,110,.4),rgba(139,56,212,.4),transparent);margin:2rem 0}
 .l-sign{font-family:'Dancing Script',cursive;font-size:2rem;font-weight:700;text-align:right;display:block;background:linear-gradient(135deg,var(--petal),var(--blush));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .l-borahae{font-family:'Noto Serif KR',serif;font-size:.8rem;color:var(--t4);text-align:right;letter-spacing:.2em;display:block;margin-top:.4rem;}
+.cursor-blink{display:inline-block;width:2px;height:1.1em;background:var(--lavender);margin-left:2px;vertical-align:text-bottom;animation:cursorBlink .7s ease-in-out infinite;}
+@keyframes cursorBlink{0%,100%{opacity:1}50%{opacity:0}}
 
 /* ═══ SCENE 6 — BTS ═══ */
 #s6{background:linear-gradient(180deg,var(--mid),var(--deep))}
@@ -368,7 +370,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
 .wm-item{padding:1.2rem 0;border-bottom:1px solid rgba(42,10,98,.4);display:flex;gap:14px;}
 .w-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--lift),var(--glow));display:flex;align-items:center;justify-content:center;font-family:'Dancing Script',cursive;font-size:1rem;color:#fff;flex-shrink:0}
 .w-name{font-family:'Cinzel',serif;font-size:8px;letter-spacing:.15em;color:var(--petal);text-transform:uppercase;margin-bottom:.25rem;}
-.w-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--t1);line-height:1.8;}
+.w-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--t1);line-height:1.8;white-space:pre-wrap;word-break:break-word;}
 .w-time{font-family:'Lato',sans-serif;font-size:.7rem;color:var(--t4);margin-top:.2rem;}
 
 /* ═══ SCENE 9 — FINALE ═══ */
@@ -605,8 +607,8 @@ textarea.wish-input{vertical-align:top;resize:none;}
     <div class="ck"><span class="ck-n" id="cdS">--</span><span class="ck-u">Seconds</span></div>
   </div>
   <div class="clock-bottom r d4">
-    <span class="ck-born">13 · 07 · 2009 · Leo ♌</span>
-    <span class="ck-army">ARMY Forever 💜</span>
+    <span class="ck-born">13 · 07 · 2026 · Monday</span>
+    <span class="ck-army"> 💜 Forever</span>
   </div>
 
   <div id="cakeSection">
@@ -637,7 +639,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
     <div class="u-cell">
        <span class="u-tag">Date of Birth</span>
       <div class="u-big">13 July, 2009  <span style="font-family:'Cinzel',serif;font-size:7.5px;color:var(--t3);letter-spacing:.22em;margin-top:.18rem;">(Monday)</span></div>
-      <div class="u-sub">Brave · Passionate · Radiant · Loyal<br/>The sun's own sign — naturally.</div>
+      <div class="u-sub">·Soft · Sincere <br> ·Quietly Extraordinary</div>
     </div>
     <div class="u-cell">
       <span class="u-tag">Turning</span>
@@ -646,7 +648,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
     </div>
     <div class="u-cell">
       <span class="u-tag">The stars say —</span>
-      <blockquote class="u-quote">"You were born on a day the universe rearranged itself. Everything you touch becomes more beautiful."</blockquote>
+      <blockquote class="u-quote">"Allah created you with care — and in you, He placed something truly special. May your life reflect that beauty always."</blockquote>
       <span class="u-attr">— written for Afiya 💜</span>
     </div>
   </div>
@@ -677,7 +679,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
       <span class="l-date" id="letterDate"><span class="l-date-day">13 · July · 2026</span><span class="l-date-sub">For Afiya,</span></span>
 
       <span class="l-dear">Dear Afiya,</span>
-      <div class="l-body-text" id="letterBody">🥳Happy Birthday!🥳Wishing you joy and success always.Tumi ekhon officially aro ek bochor boro,but tumar cuteness ekhono ekdom baby-level😊Always keep smiling...jdio tumi bolo, 'Eto hashle dath pore jaibo😁' You came unknowingly,but will remain forever🤍</div>
+      <div class="l-body-text" id="letterBody">Happy Birthday!🥳🥳Wishing you joy and success always.Tumi ekhon officially aro ek bochor boro,but tumar cuteness ekhono ekdom baby-level😊Always keep smiling....jdio tumi bolo, 'Eto hashle dath pore jaibo😁'. You came unknowingly, but will always hold a special place in my heart 🤍</div>
       <div class="l-rule"></div>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
         <img src="photos/letter.gif" alt="" style="width:72px;height:72px;object-fit:contain;border-radius:4px;opacity:.9;" onerror="this.style.display='none'"/>
@@ -748,12 +750,12 @@ textarea.wish-input{vertical-align:top;resize:none;}
 <section class="sec" id="s9" style="min-height:auto;padding:5.5rem 2rem">
   <span class="section-label r">🎆 Grand Finale</span>
   <h2 class="section-title r d1">Celebrate <em>Afiya</em></h2>
-  <div class="finale-q r d2">
-    "생일 축하해, Afiya.<br/>
-    <strong>You are the universe itself —</strong><br/>
-    infinite, dazzling, and utterly irreplaceable.<br/>
-    <span style="color:var(--petal);font-size:.8em">오늘도 내일도, 항상 보라해. 💜</span>"
-  </div>
+ <div class="finale-q r d2">
+  "생일 축하해, Afiya.<br/>
+  <strong>May Allah write only goodness in your story —</strong><br/>
+  every chapter brighter than the last.<br/>
+  <span style="color:var(--petal);font-size:.8em">오늘도 내일도, 항상 보라해. 💜</span>"
+</div>
   <button class="finale-btn r d3" onclick="grandFinale()">
     <span class="finale-btn-inner">💜&nbsp;Click to Celebrate &nbsp;💜</span>
     <div class="finale-btn-glow"></div>
@@ -769,12 +771,15 @@ textarea.wish-input{vertical-align:top;resize:none;}
     <div class="c-borahae-en r d1">I Purple You · Afiya</div>
     <div class="c-name r d2">Afiya</div>
     <div class="c-hearts r d3"><div class="ch"></div><div class="ch"></div><div class="ch"></div></div>
-    <p class="c-poem r d4">
-      당신은 나의 전부야<br/><em>You are my everything.</em><br/><br/>
-      오늘 하루도 행복하길 바라<br/><em>May today bring you every joy.</em><br/><br/>
-      당신이 있어서 세상이 더 빛나<br/><em>The world shines brighter because you're in it.</em>
-    </p>
-    <div class="c-army r d5">💜 &nbsp; ARMY Forever &nbsp; · &nbsp; 방탄소년단 &nbsp; 💜</div>
+ <p class="c-poem r d4">
+  May Allah grant you joy beyond measure<br/>
+  <em>and peace that never leaves your heart.</em><br/><br/>
+  You deserve every good thing coming your way<br/>
+  <em>and so much more than you know.</em><br/><br/>
+  Somewhere, someone smiles<br/>
+  <em>just because you exist. 💜</em>
+</p>
+    <div class="c-army r d5">💜 &nbsp; Made with love · For Afiya &nbsp; 💜</div>
     <div class="c-credit r d6" style="margin-top:.6rem">Made with every bit of love · 2026</div>
   </div>
 </section>
@@ -1122,13 +1127,45 @@ const PHOTOS=[
 ];
 let lbIdx=0;
 const loadedPhotos=[];
+/* ════ LETTER TYPEWRITER ════ */
+(()=>{
+  const el=document.getElementById('letterBody');
+  if(!el)return;
+  const fullText=el.textContent;
+  el.textContent='';
+  let idx=0,started=false,timer=null;
 
+  const cursor=document.createElement('span');
+  cursor.className='cursor-blink';
+  el.appendChild(cursor);
+
+  function type(){
+    if(idx>=fullText.length){
+      cursor.remove();
+      return;
+    }
+    el.insertBefore(document.createTextNode(fullText[idx++]),cursor);
+    timer=setTimeout(type, idx<20?60:28);
+  }
+
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting&&!started){
+        started=true;
+        setTimeout(type,600);
+        obs.disconnect();
+      }
+    });
+  },{threshold:.3});
+
+  obs.observe(el);
+})();
 function buildGallery(){
   const g=document.getElementById('gallery');g.innerHTML='';
   PHOTOS.forEach((path,i)=>{
     const s=document.createElement('div');s.className='g-slot';
     const img=document.createElement('img');img.alt='Afiya';img.src=path;
-    const badge=document.createElement('span');badge.className='g-badge';badge.textContent='✦';
+    const badge=document.createElement('span');badge.className='g-badge';badge.textContent='💜';
     img.onload=()=>{
       img.style.opacity='1';
       if(!loadedPhotos.includes(i))loadedPhotos.push(i);
@@ -1178,9 +1215,9 @@ const MEMBERS=[
   {kr:'진',  en:'Jin',   msg:"Worldwide beautiful Afiya! Your smile could light up the entire universe. Eat well, laugh loudly, and know you are deeply loved. 석진이가 사랑해! 💜"},
   {kr:'슈가',en:'Suga',  msg:"Dreams don't have expiry dates, Afiya. The fire inside you is real and it will take you places. Never let it go out. 💜"},
   {kr:'제이홉',en:'J-Hope',msg:"You are someone's sunshine, Afiya. Your energy, your warmth — it changes the atmosphere of every room you walk into. 💜"},
-  {kr:'지민',en:'Jimin', msg:"You have so much beauty, so much charm, so much heart. Promise me you'll love yourself first — always. 💜"},
-  {kr:'뷔',  en:'V',     msg:"Life is a canvas and you paint it in the most extraordinary colors. Stay weird, stay magical, stay completely yourself. 보라해! 💜"},
-  {kr:'정국',en:'JK',    msg:"Golden girl Afiya — you are brave, talented, and enough. Stay strong and stay magical. 생일 축하합니다! 💜"},
+  {kr:'지민',en:'Jimin', msg:"You have so much beauty, so much charm, so much heart. Promise me you'll always be kind to yourself — you deserve every good thing. 💜"},
+ {kr:'뷔',en:'V', msg:"Life is a canvas and you paint it in the most extraordinary colors. Stay rare, stay you — the world needs exactly that. 보라해! 💜"},
+  {kr:'정국',en:'JK', msg:"Golden girl Afiya — you are brave, talented, and enough. Stay strong, keep going, and know you are truly special. 생일 축하합니다! 💜"},
 ];
 MEMBERS.forEach(m=>{
   const c=document.createElement('div');c.className='mc';
@@ -1300,7 +1337,6 @@ document.getElementById('expandModal').addEventListener('click',function(e){
   if(e.target===this)closeExpandModal();
 });
 
-loadWishes();
 async function loadWishes(){
   try{
     const r=await fetch(JB_URL+'/latest',{
