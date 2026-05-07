@@ -222,7 +222,7 @@ body{background:var(--ink);color:var(--t1);font-family:'Lato',sans-serif;font-we
 .l-corner.tr{top:-1px;right:-1px;border-width:1px 1px 0 0}
 .l-corner.bl{bottom:-1px;left:-1px;border-width:0 0 1px 1px}
 .l-corner.br{bottom:-1px;right:-1px;border-width:0 1px 1px 0}
-.l-stamp{position:absolute;top:1.6rem;right:1.6rem;width:54px;height:66px;border:1px solid rgba(139,56,212,.3);background:rgba(42,10,98,.4);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.l-stamp{position:absolute;top:1.6rem;right:1.6rem;width:110px;height:110px;border:none;background:transparent;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .l-stamp img{width:100%;height:100%;object-fit:cover;display:block;}
 .l-date{font-family:'Cinzel',serif;font-size:8px;letter-spacing:.45em;color:var(--t4);text-transform:uppercase;margin-bottom:2rem;display:block;line-height:2;}
 .l-date .l-date-day{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.6rem;font-weight:300;letter-spacing:.06em;background:linear-gradient(135deg,var(--lavender),var(--mist));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:.1rem;}
@@ -436,7 +436,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .g-slot:not(:first-child){min-height:130px;}
   .letter{padding:2.2rem 1.4rem 1.8rem}
   .l-dear{font-size:2.2rem}
-  .l-stamp{width:40px;height:50px;top:1rem;right:1rem;}
+  .l-stamp{width:80px;height:80px;top:1rem;right:1rem;}
   .l-body-text{font-size:1rem;line-height:2.1}
   .m-grid{flex-wrap:wrap;gap:4px}
   .mc{flex:0 0 calc(25% - 3px);padding:.8rem .3rem .7rem}
@@ -675,7 +675,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
     <div class="letter r d3">
       <div class="l-corner tl"></div><div class="l-corner tr"></div>
       <div class="l-corner bl"></div><div class="l-corner br"></div>
-      <div class="l-stamp"><img src="photos/stamp.jpg" alt="stamp" onerror="this.style.opacity='.3'" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+   <div class="l-stamp" style="border:none;background:transparent;"><img src="photos/stamp.jpg" alt="stamp" onerror="this.style.opacity='.3'" style="width:100%;height:100%;object-fit:contain;display:block;"/></div>
       <span class="l-date" id="letterDate"><span class="l-date-day">13 · July · 2026</span><span class="l-date-sub">For Afiya,</span></span>
 
       <span class="l-dear">Dear Afiya,</span>
