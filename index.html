@@ -1203,11 +1203,10 @@ const obs=new IntersectionObserver(entries=>{
 
   const st=document.createElement('style');
   st.textContent=`
-    @keyframes glowReveal{
-      0%{opacity:0;text-shadow:0 0 40px #8b38d4,0 0 80px #c4386e}
-      50%{opacity:.7;text-shadow:0 0 20px #8b38d4}
-      100%{opacity:1;text-shadow:none}
-    }
+   @keyframes glowReveal{
+  0%{opacity:0}
+  100%{opacity:1}
+}
     .glow-reveal{
       animation:glowReveal 7s ease forwards;
     }
