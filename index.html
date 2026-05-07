@@ -1127,32 +1127,101 @@ const PHOTOS=[
 ];
 let lbIdx=0;
 const loadedPhotos=[];
-/* ════ LETTER TYPEWRITER ════ */
+
+/* ════ LETTER RAIN ANIMATION ════ */
+(()=>{
+  const letter=document.getElementById('s5');
+  if(!letter)return;
+  let raining=false;
+
+  const st=document.createElement('style');
+  st.textContent=`
+    @keyframes rainFall{
+      0%{transform:translateY(-20px);opacity:.8}
+      100%{transform:translateY(100vh);opacity:0}
+    }
+    .rain-drop{
+      position:absolute;
+      top:-20px;
+      width:1.5px;
+      border-radius:2px;
+      pointer-events:none;
+      z-index:3;
+      animation:rainFall linear forwards;
+      background:linear-gradient(to bottom,rgba(255,255,255,.9),rgba(255,255,255,.4),transparent);
+    }
+  `;
+  document.head.appendChild(st);
+
+  function spawnDrop(){
+    const d=document.createElement('div');
+    const left=Math.random()*100;
+    const height=14+Math.random()*22;
+    const dur=.6+Math.random()*1.6;
+    const delay=Math.random()*.5;
+    d.className='rain-drop';
+    d.style.cssText+=`
+      left:${left}%;
+      height:${height}px;
+      animation-duration:${dur}s;
+      animation-delay:${delay}s;
+    `;
+    letter.appendChild(d);
+    setTimeout(()=>d.remove(),(dur+delay+.5)*1000);
+  }
+
+const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting&&!raining){
+        raining=true;
+        let isVisible=true;
+        const exitObs=new IntersectionObserver(en=>{
+          isVisible=en[0].isIntersecting;
+        },{threshold:.1});
+        exitObs.observe(letter);
+        const interval=setInterval(()=>{
+          if(isVisible){
+            for(let i=0;i<3;i++)spawnDrop();
+          } else {
+            clearInterval(interval);
+            raining=false;
+          }
+        },80);
+      }
+    });
+  },{threshold:.3});
+
+  obs.observe(letter);
+})();
+/* ════ LETTER GLOW ANIMATION ════ */
 (()=>{
   const el=document.getElementById('letterBody');
   if(!el)return;
-  const fullText=el.textContent;
-  el.textContent='';
-  let idx=0,started=false,timer=null;
+  const fullText=el.innerHTML;
+  el.style.opacity='0';
+  let started=false;
 
-  const cursor=document.createElement('span');
-  cursor.className='cursor-blink';
-  el.appendChild(cursor);
-
-  function type(){
-    if(idx>=fullText.length){
-      cursor.remove();
-      return;
+  const st=document.createElement('style');
+  st.textContent=`
+    @keyframes glowReveal{
+      0%{opacity:0;text-shadow:0 0 40px #8b38d4,0 0 80px #c4386e}
+      50%{opacity:.7;text-shadow:0 0 20px #8b38d4}
+      100%{opacity:1;text-shadow:none}
     }
-    el.insertBefore(document.createTextNode(fullText[idx++]),cursor);
-    timer=setTimeout(type, idx<20?60:28);
-  }
+    .glow-reveal{
+      animation:glowReveal 7s ease forwards;
+    }
+  `;
+  document.head.appendChild(st);
 
   const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
       if(e.isIntersecting&&!started){
         started=true;
-        setTimeout(type,600);
+        setTimeout(()=>{
+          el.style.opacity='1';
+          el.classList.add('glow-reveal');
+        },400);
         obs.disconnect();
       }
     });
