@@ -609,6 +609,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
     <div class="hero-sub r d2">생일 축하해요 — Happy Birthday</div>
     <div class="hero-kr r d3">방탄소년단 · ARMY · 보라해 💜</div>
     <button class="hero-btn r d4" onclick="gs(1)">
+      <div class="hero-btn-icon"></div>
       <span>Enter her world</span>
     </button>
   </div>
@@ -1253,6 +1254,7 @@ function buildGallery(){
   PHOTOS.forEach((path,i)=>{
     const s=document.createElement('div');s.className='g-slot';
     const img=document.createElement('img');img.alt='Afiya';img.src=path;
+    const badge=document.createElement('span');badge.className='g-badge';badge.textContent='';
     img.onload=()=>{
       img.style.opacity='1';
       if(!loadedPhotos.includes(i))loadedPhotos.push(i);
