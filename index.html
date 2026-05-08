@@ -419,6 +419,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   #s1{justify-content:center;padding-top:0;padding-bottom:0}
 .hero-wrap{margin-top:-3rem}
 .hero-name{font-size:clamp(4.5rem,18vw,8rem)}
+.hero-btn-icon{width:32px;height:32px;font-size:14px}
   .sec{padding:3.5rem 1rem 3rem !important;}
   #sidenav{display:none}
   .hero-name{font-size:clamp(5rem,20vw,8rem)}
@@ -463,9 +464,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .section-title{font-size:clamp(2.2rem,8vw,3.5rem)}
   .lb-btn{padding:8px 16px;font-size:7px}
   #lb img{max-width:95vw;max-height:75vh;}
-}
-
-.finale-btn-inner{padding:14px 24px;font-size:9px}
+  .finale-btn-inner{padding:14px 24px;font-size:9px}
 .finale-q{font-size:clamp(1rem,4vw,1.5rem);padding:0 .5rem}
 .l-sign{font-size:1.4rem}
 .songs-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr}
@@ -478,6 +477,9 @@ textarea.wish-input{vertical-align:top;resize:none;}
 .song-disc-label{font-size:.85rem}
 .songs-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr}
 .song-card{align-items:center;height:100%}
+}
+
+
 @media(max-width:400px){
   .hero-name{font-size:clamp(4rem,18vw,6rem)}
   .universe{grid-template-columns:1fr 1fr}
@@ -1177,8 +1179,8 @@ const loadedPhotos=[];
   function spawnDrop(){
     const d=document.createElement('div');
     const left=Math.random()*100;
-    const height=14+Math.random()*22;
-    const dur=.6+Math.random()*1.6;
+    const height=6+Math.random()*8;
+    const dur=2.2+Math.random()*1.6;
     const delay=Math.random()*.5;
     d.className='rain-drop';
     d.style.cssText+=`
