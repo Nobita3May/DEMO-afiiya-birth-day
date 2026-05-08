@@ -426,7 +426,12 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .clock-bottom{flex-direction:column;gap:.4rem;text-align:center}
   #cakeCanvas{width:100%!important;height:auto!important;}
   .universe{grid-template-columns:1fr 1fr}
-  .u-cell{padding:1.6rem 1.2rem}
+.u-cell{padding:1rem .8rem}
+.u-num{font-size:4rem}
+.u-script{font-size:1.8rem}
+.u-big{font-size:1.3rem}
+.u-sub{font-size:.78rem;line-height:1.6}
+.u-quote{font-size:.88rem;line-height:1.8}
   .u-num{font-size:5rem}
   .gallery{
     grid-template-columns:1fr 1fr;
@@ -442,7 +447,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .mc{flex:0 0 calc(25% - 3px);padding:.8rem .3rem .7rem}
   .mc:nth-child(5),.mc:nth-child(6),.mc:nth-child(7){flex:0 0 calc(33.33% - 3px)}
   .constellation{padding-bottom:60%}
-  .songs-grid{grid-template-columns:1fr}
+  .songs-grid{grid-template-columns:repeat(2,1fr)}
   .song-desc{display:none}
   .song-card{padding:1rem 1.2rem}
   #player{min-width:96vw;padding:8px 14px;gap:10px;border-radius:16px;bottom:.8rem}
@@ -456,10 +461,20 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .lb-btn{padding:8px 16px;font-size:7px}
   #lb img{max-width:95vw;max-height:75vh;}
 }
-
+.songs-grid{grid-template-columns:repeat(2,1fr)}
+.song-card{padding:.7rem .6rem;gap:.5rem}
+.song-title{font-size:.85rem}
+.song-title-kr{font-size:.62rem}
+.song-num{font-size:.65rem}
+.song-disc{width:34px;height:34px}
+.song-btn{width:30px;height:30px;font-size:11px}
+.song-disc-label{font-size:.85rem}
 @media(max-width:400px){
   .hero-name{font-size:clamp(4rem,18vw,6rem)}
-  .universe{grid-template-columns:1fr}
+  .universe{grid-template-columns:1fr 1fr}
+.u-cell{padding:.8rem .6rem}
+.u-num{font-size:3rem}
+.u-sub{font-size:.72rem}
   .u-cell:nth-child(even){border-right:1px solid rgba(139,56,212,.12)}
   .u-cell:nth-child(3){border-bottom:1px solid rgba(139,56,212,.12)}
   .u-cell:nth-child(4){border-bottom:none}
@@ -664,7 +679,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   <div class="gallery r d3" id="gallery"></div>
 </section>
 
-<div class="divider r"><div class="div-line"></div><div class="div-dot">✦</div><div class="div-line"></div></div>
+<div class="divider r"><div class="div-line"></div><div class="div-dot">💜</div><div class="div-line"></div></div>
 
 <!-- ══ SCENE 5 — LETTER ══ -->
 <section class="sec" id="s5" style="min-height:auto;padding:5.5rem 2rem">
@@ -689,7 +704,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   </div>
 </section>
 
-<div class="divider r"><div class="div-line"></div><div class="div-dot">✦</div><div class="div-line"></div></div>
+<div class="divider r"><div class="div-line"></div><div class="div-dot">💜</div><div class="div-line"></div></div>
 
 <!-- ══ SCENE 6 — BTS ══ -->
 <section class="sec" id="s6" style="min-height:auto;padding:5.5rem 2rem">
@@ -707,7 +722,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   </div>
 </section>
 
-<div class="divider r"><div class="div-line"></div><div class="div-dot">✦</div><div class="div-line"></div></div>
+<div class="divider r"><div class="div-line"></div><div class="div-dot">💜</div><div class="div-line"></div></div>
 
 <!-- ══ SCENE 7 — PLAYLIST ══ -->
 <section class="sec" id="s7" style="min-height:auto;padding:5.5rem 2rem">
@@ -723,7 +738,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   <p class="r d5" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--t3);text-align:center;margin-top:2rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:2.1;">These songs carry the same warmth, strength and magic that you do, Afiya. 💜</p>
 </section>
 
-<div class="divider r"><div class="div-line"></div><div class="div-dot">✦</div><div class="div-line"></div></div>
+<div class="divider r"><div class="div-line"></div><div class="div-dot">💜</div><div class="div-line"></div></div>
 
 <!-- ══ SCENE 8 — GUESTBOOK WISHES ══ -->
 <section class="sec" id="s8" style="min-height:auto;padding:5.5rem 2rem">
@@ -744,7 +759,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   </div>
 </section>
 
-<div class="divider r"><div class="div-line"></div><div class="div-dot">✦</div><div class="div-line"></div></div>
+<div class="divider r"><div class="div-line"></div><div class="div-dot">💜</div><div class="div-line"></div></div>
 
 <!-- ══ SCENE 9 — FINALE ══ -->
 <section class="sec" id="s9" style="min-height:auto;padding:5.5rem 2rem">
@@ -1455,14 +1470,14 @@ function togglePwVis(){
   const inp=document.getElementById('pwInput');
   const btn=document.getElementById('pwToggleBtn');
   if(inp.type==='password'){inp.type='text';btn.textContent='🙈';}
-  else{inp.type='password';btn.textContent='👁';}
+  else{inp.type='password';btn.textContent='👀';}
 }
 
 /* ── পাসওয়ার্ড Modal ── */
 function openPwModal(){
   const inp=document.getElementById('pwInput');
   inp.value='';inp.type='password';
-  document.getElementById('pwToggleBtn').textContent='👁';
+  document.getElementById('pwToggleBtn').textContent='👀';
   document.getElementById('pwErr').textContent='';
   document.getElementById('pwModal').classList.add('open');
   setTimeout(()=>inp.focus(),200);
