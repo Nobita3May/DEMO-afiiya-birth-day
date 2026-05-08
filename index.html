@@ -416,6 +416,9 @@ textarea.wish-input{vertical-align:top;resize:none;}
 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:768px){
+  #s1{justify-content:center;padding-top:2rem}
+.hero-wrap{margin-top:0}
+.hero-name{font-size:clamp(4.5rem,18vw,8rem)}
   .sec{padding:3.5rem 1rem 3rem !important;}
   #sidenav{display:none}
   .hero-name{font-size:clamp(5rem,20vw,8rem)}
@@ -450,7 +453,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .songs-grid{grid-template-columns:repeat(2,1fr)}
   .song-desc{display:none}
   .song-card{padding:1rem 1.2rem}
-  #player{min-width:96vw;padding:8px 14px;gap:10px;border-radius:16px;bottom:.8rem}
+ #player{width:calc(100vw - 1.6rem);min-width:unset;padding:8px 12px;gap:8px;border-radius:16px;bottom:.8rem;left:50%;transform:translateX(-50%)}
   .p-vol{display:none}
   .p-title{max-width:120px}
   .wish-form{flex-wrap:wrap}
@@ -461,6 +464,9 @@ textarea.wish-input{vertical-align:top;resize:none;}
   .lb-btn{padding:8px 16px;font-size:7px}
   #lb img{max-width:95vw;max-height:75vh;}
 }
+
+.finale-btn-inner{padding:14px 24px;font-size:9px}
+.finale-q{font-size:clamp(1rem,4vw,1.5rem);padding:0 .5rem}
 .l-sign{font-size:1.4rem}
 .songs-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr}
 .song-card{padding:.7rem .6rem;gap:.5rem}
@@ -607,10 +613,7 @@ textarea.wish-input{vertical-align:top;resize:none;}
       <span>Enter her world</span>
     </button>
   </div>
-  <div class="scroll-cue">
-    <div class="scroll-cue-mouse"><div class="scroll-cue-wheel"></div></div>
-    <span class="scroll-cue-text">scroll</span>
-  </div>
+
 </section>
 
 <!-- ══ SCENE 2 — COUNTDOWN + CAKE ══ -->
