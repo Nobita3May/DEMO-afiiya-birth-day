@@ -436,7 +436,6 @@ textarea.wish-input{vertical-align:top;resize:none;}
 .u-big{font-size:1.3rem}
 .u-sub{font-size:.78rem;line-height:1.6}
 .u-quote{font-size:.88rem;line-height:1.8}
-  .u-num{font-size:5rem}
   .gallery{
     grid-template-columns:1fr 1fr;
     grid-template-rows:200px 130px 130px;
@@ -940,11 +939,8 @@ x.shadowBlur=12;
     x.setLineDash([]);x.lineDashOffset=0;
     pts.slice(0,-1).forEach(p=>{
       x.globalAlpha=1;
-      x.shadowColor='rgba(184,122,232,.9)';
-x.shadowBlur=18;
-x.fillStyle='#dbbff5';
+      x.fillStyle='#dbbff5';
 x.beginPath();x.arc(p.x,p.y,5.5,0,Math.PI*2);x.fill();
-x.shadowBlur=0;
 x.fillStyle='#ffffff';
 x.beginPath();x.arc(p.x,p.y,2.2,0,Math.PI*2);x.fill();
       x.font='bold 13px "Cinzel",serif';
@@ -957,10 +953,11 @@ x.beginPath();x.arc(p.x,p.y,2.2,0,Math.PI*2);x.fill();
     });
     x.globalAlpha=1;
     x.shadowColor='rgba(196,56,110,.9)';
-x.shadowBlur=24;
-x.fillStyle='#f5b8d0';
-x.beginPath();x.arc(ctr.x,ctr.y,9,0,Math.PI*2);x.fill();
-x.shadowBlur=0;
+    x.shadowBlur=24;
+    x.fillStyle='#f5b8d0';
+    x.beginPath();x.arc(ctr.x,ctr.y,9,0,Math.PI*2);x.fill();
+    x.shadowBlur=0;
+    x.shadowBlur=0;
     x.fillStyle='#ffffff';
     x.beginPath();x.arc(ctr.x,ctr.y,4,0,Math.PI*2);x.fill();
     x.font='bold 15px "Cinzel",serif';
