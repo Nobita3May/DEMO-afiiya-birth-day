@@ -1593,7 +1593,7 @@ function heartBurst(bx,by){
   for(let t=0;t<250;t++){const a=t/60*Math.PI*2,r=.4,hx=16*(Math.sin(a)**3)*r*2,hy=-(13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a))*r*2,sp=1.8+Math.random()*2.5;fwp.push({x:bx,y:by,vx:hx*.18*sp,vy:hy*.18*sp,alpha:1,col:['#e8709a','#f5b8d0','#c4386e'][t%3],sz:2.5,type:'heart',decay:.009,grav:.04,trail:[]});}
 }
 function fwDraw(){
-  fwc.width=innerWidth;fwc.height=innerHeight;fwOn=true;
+  fwOn=true;
   (function frame(){
     fwx.clearRect(0,0,fwc.width,fwc.height);fwp=fwp.filter(p=>p.alpha>0);
     fwp.forEach(p=>{
@@ -1609,6 +1609,7 @@ function fwDraw(){
   })();
 }
 function launchFW(){
+  fwc.width=innerWidth;fwc.height=innerHeight;
   fwc.style.display='block';fwOn=true;fwDraw();
   const W=innerWidth,H=innerHeight;
   const spots=[[.5,.15],[.15,.2],[.85,.2],[.3,.35],[.7,.35],[.1,.5],[.9,.45],[.5,.55],[.25,.65],[.75,.6],[.5,.3]];
